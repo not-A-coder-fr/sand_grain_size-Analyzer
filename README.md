@@ -67,3 +67,53 @@ This description emphasizes:
 - **Practical application** (coastal studies, environmental monitoring)
 - **Hackathon readiness** (offline deployment, field-tested design)
 - **Scalability** (future improvements section)
+
+---
+
+### 📁 **Core Files**
+| File | Purpose |
+|------|---------|
+| **`main.py`** | Project entry point. Starts Flask server when run. |
+| **`config.py`** | Central configuration (paths, sensor settings, camera specs). |
+| **`requirements.txt`** | Lists Python dependencies (Flask, OpenCV, YOLO, etc.). |
+
+---
+
+### 🌐 **Web Interface**
+| File | Purpose |
+|------|---------|
+| **`static/styles.css`** | UI styling (dark mode, responsive layout, colors). |
+| **`static/script.js`** | Frontend logic (camera capture, data processing, CSV export). |
+| **`templates/index.html`** | Main UI page (camera preview, capture button, analysis results). |
+| **`templates/results.html`** | Dedicated results page (geotagged data, processed image). |
+
+---
+
+### 🤖 **AI & Processing**
+| File | Purpose |
+|------|---------|
+| **`models/best.pt`** | Pre-trained YOLOv8 model (detects sand grains). |
+| **`app/routes.py`** | Handles API endpoints (image capture, analysis, data export). |
+| **`app/utils/image_processor.py`** | Processes images: calculates grain size using ToF calibration. |
+| **`app/utils/yolo_grain_detector.py`** | Runs YOLO model on captured images. |
+
+---
+
+### 📡 **Hardware Integration**
+| File | Purpose |
+|------|---------|
+| **`app/utils/camera.py`** | Captures images from Pi Camera (or laptop webcam). |
+| **`app/utils/tof_calibrate.py`** | Reads VL53L1X ToF sensor for pixel-to-mm calibration. |
+| **`app/utils/gnss_parser.py`** | Parses u-blox NEO-M8N GNSS data for geotagging. |
+
+---
+
+### 🚀 **Deployment Files**
+| File | Purpose |
+|------|---------|
+| **`scripts/start_service.sh`** | Script to launch the app (used by systemd service). |
+| **`systemd/sand-analyzer.service`** | Configures auto-start on Raspberry Pi boot. |
+| **`data/images/`** | Stores captured sand grain images. |
+| **`data/results.csv`** | Logs analysis results (grain count, size, location, timestamp). |
+
+
