@@ -48,12 +48,6 @@ pip3 install -r requirements.txt
 # Run app
 python3 main.py
 ```
-
----
-
-## 📦 **Demo Video**
-[Watch Live Demo](https://youtu.be/your-video-id) *(Replace with your video link)*
-
 ---
 
 ## 🌟 **Why This Matters**
