@@ -67,4 +67,3 @@ This description emphasizes:
 - **Hackathon readiness** (offline deployment, field-tested design)
 - **Scalability** (future improvements section)
 
-Perfect for SIH judging! Let me know if you want to tweak anything. 😊
