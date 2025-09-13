@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="title-center">
+            <h1>📊 Analysis Results</h1>
+        </div>
+        <div class="dark-toggle">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div class="status"></div>
+
+        <section class="image-row">
+            <div class="image-box">
+                <h3>Processed Image</h3>
+                <img id="processedImage" alt="Processed Image" style="width: 100%; max-width: 450px; display: block;">
+            </div>
+        </section>
+
+        <section>
+            <h3>📊 Sand Grain Analysis</h3>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grain Count</td>
+                        <td id="grainCount">{{ results[0].grain_count }}</td>
+                    </tr>
+                    <tr>
+                        <td>Avg Size (mm)</td>
+                        <td id="avgSize">{{ results[0].avg_size_mm }}</td>
+                    </tr>
+                    <tr>
+                        <td>Std Dev (mm)</td>
+                        <td id="stdDev">{{ results[0].std_dev_mm }}</td>
+                    </tr>
+                    <tr>
+                        <td>Latitude</td>
+                        <td id="latitude">{{ results[0].lat }}</td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td id="longitude">{{ results[0].lon }}</td>
+                    </tr>
+                    <tr>
+                        <td>Timestamp</td>
+                        <td id="timestamp">{{ results[0].timestamp }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="buttons">
+            <button onclick="downloadData()">💾 Download Data</button>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

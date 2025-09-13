@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shore Scan Camera</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="title-center">
+            <h1>📷 Shore Scan Camera</h1>
+        </div>
+        <div class="dark-toggle">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section class="image-row">
+            <div class="image-box">
+                <h3>Captured Image</h3>
+                <video id="video" autoplay playsinline></video>
+                <button id="snapBtn">📸 Take Snapshot</button>
+                <img id="capturedImage" alt="Captured Snapshot" style="display: none;">
+            </div>
+
+            <div class="image-box">
+                <h3>Processed Image</h3>
+                <img id="processedImage" alt="Processed Image" style="display: none;">
+            </div>
+        </section>
+
+        <section class="buttons">
+            <button id="analyzeBtn" disabled>🔍 Analyze</button>
+            <button id="downloadBtn" disabled>💾 Download Data</button>
+        </section>
+
+        <div class="status"></div>
+
+        <section>
+            <h3>📊 Sand Grain Analysis</h3>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grain Count</td>
+                        <td id="grainCount">--</td>
+                    </tr>
+                    <tr>
+                        <td>Avg Size (mm)</td>
+                        <td id="avgSize">--</td>
+                    </tr>
+                    <tr>
+                        <td>Std Dev (mm)</td>
+                        <td id="stdDev">--</td>
+                    </tr>
+                    <tr>
+                        <td>Latitude</td>
+                        <td id="latitude">--</td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td id="longitude">--</td>
+                    </tr>
+                    <tr>
+                        <td>Timestamp</td>
+                        <td id="timestamp">--</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

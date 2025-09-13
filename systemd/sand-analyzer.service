@@ -1,0 +1,13 @@
+[Unit]
+Description=Sand Grain Analyzer Service
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/sand-grain-analyzer
+ExecStart=/home/pi/sand-grain-analyzer/scripts/start_service.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
