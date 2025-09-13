@@ -61,11 +61,6 @@ python3 main.py
 
 ---
 
-## 📝 **License**
-MIT License — Open-source and free to use for educational purposes
-
----
-
 This description emphasizes:
 - **Technical rigor** (YOLOv8, ToF calibration)
 - **Practical application** (coastal studies, environmental monitoring)
