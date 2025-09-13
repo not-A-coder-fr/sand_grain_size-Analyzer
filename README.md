@@ -1,6 +1,3 @@
-Here's a **professional GitHub repository description** for your Smart India Hackathon (SIH) project:
-
----
 
 # 🏖️ **Sand Grain Size Analyzer (Field-Ready AI System)**
 
